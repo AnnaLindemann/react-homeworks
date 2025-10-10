@@ -1,0 +1,27 @@
+.counterContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.countInfo {
+  color: white;
+  font-size: 2rem;
+}
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+}
+.btn {
+  width: 4rem;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+  background-color: green;
+}
+.reset {
+  background-color: red;
+}

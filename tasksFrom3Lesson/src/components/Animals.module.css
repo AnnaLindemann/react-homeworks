@@ -1,0 +1,30 @@
+.containerAnimal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.btnAdd,
+.btnDelete {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: antiquewhite;
+  cursor: pointer;
+  border-color: bisque;
+}
+.ulContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.liItem {
+  display: flex;
+  justify-content: space-between;
+  background-color: blue;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  width: 10rem;
+  color: rgb(236, 225, 212);
+  font-size: 1.5rem;
+}

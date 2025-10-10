@@ -1,0 +1,26 @@
+.peopleContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  justify-content: center;
+  align-items: center;
+}
+.ulPeople {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.liPeople {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: aqua;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: blue 0.1rem solid;
+  color: rgb(24, 61, 94);
+}
+.btnReturn {
+  max-width: fit-content;
+  cursor: pointer;
+}

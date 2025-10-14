@@ -1,0 +1,11 @@
+.chooseContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.chooseCity {
+  font-size: 1.5rem;
+  color: rgb(221, 149, 61);
+  font-weight: 800;
+}

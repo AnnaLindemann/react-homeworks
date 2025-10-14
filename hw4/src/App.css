@@ -1,0 +1,25 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: fit-content;
+}
+
+.cityContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: fit-content;
+  padding: 2rem;
+  background-color: aqua;
+  border-radius: 1rem;
+}
+.quizContainer {
+  background-color: rgb(150, 150, 223);
+  max-width: fit-content;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  padding: 1rem;
+}

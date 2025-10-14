@@ -1,0 +1,23 @@
+.cityContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  background-color: aquamarine;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  border: 0.2rem rgb(90, 248, 182) solid;
+}
+
+.cityTitle {
+  font-family: 1.5rem;
+  color: rgb(226, 149, 34);
+}
+
+.cityImg {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 1rem;
+}

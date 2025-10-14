@@ -1,0 +1,11 @@
+.mathContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: fit-content;
+}
+.mathInfo {
+  color: aliceblue;
+  font-weight: 700;
+}

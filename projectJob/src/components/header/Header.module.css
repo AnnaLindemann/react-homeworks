@@ -1,0 +1,33 @@
+.header {
+  background-color: #cde7ff;
+  display: flex;
+  gap: 110px;
+  padding: 30px 100px;
+}
+.cooljobIcon {
+  width: 140px;
+}
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  ul,
+  div {
+    display: flex;
+    list-style: none;
+    gap: 53px;
+    align-items: center;
+  }
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+  button {
+    width: 65px;
+    height: 44px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,47 @@
+.searchHero {
+  width: 100%;
+  height: 60vh;
+  background-color: #cde7ff;
+  background-image: url("../../assets/icons/Rectangle\ 12.svg");
+  background-repeat: no-repeat;
+  background-position: right -30px center;
+  background-size: min(60vw, 700px);
+  overflow: hidden;
+  display: flex;
+}
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 100px;
+  margin-top: 40px;
+  box-shadow: #cde7ff;
+}
+.searchTitle {
+  font-size: 34px;
+  font-weight: 700;
+}
+.searchForm {
+  display: flex;
+}
+
+.searchJobCont {
+  display: flex;
+  min-width: 110px;
+  background-color: #fff;
+  padding: 15px;
+  gap: 8px;
+  padding-right: 30px;
+  .searchIcon {
+    width: 20px;
+  }
+
+  .searchJob {
+    border: none;
+  }
+}
+.searchBtn {
+  width: 80px;
+  background-color: rgb(39, 64, 89);
+  color: #fff;
+}

@@ -1,0 +1,14 @@
+.btnCont {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cde7ff;
+  .btn {
+    background-color: rgb(39, 64, 89);
+    color: #fff;
+    padding: 15px 25px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}

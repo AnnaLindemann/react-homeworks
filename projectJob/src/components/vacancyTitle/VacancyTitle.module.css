@@ -1,0 +1,12 @@
+.vacancyCont {
+  background-color: #cde7ff;
+  padding: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  .vacancyContext {
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(158, 161, 164);
+  }
+}

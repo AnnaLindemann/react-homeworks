@@ -1,11 +1,11 @@
 .searchHero {
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   background-color: #cde7ff;
   background-image: url("../../assets/icons/Rectangle\ 12.svg");
   background-repeat: no-repeat;
-  background-position: right -30px center;
-  background-size: min(60vw, 700px);
+  background-position: right -60px center;
+  background-size: min(50vw, 600px);
   overflow: hidden;
   display: flex;
 }
@@ -14,8 +14,6 @@
   flex-direction: column;
   gap: 20px;
   margin-left: 100px;
-  margin-top: 40px;
-  box-shadow: #cde7ff;
 }
 .searchTitle {
   font-size: 34px;
@@ -23,19 +21,27 @@
 }
 .searchForm {
   display: flex;
+  box-shadow: 0 5px 10px rgba(2, 2, 2, 0.5), 0 1px 4px rgba(22, 22, 22, 0.4);
+  gap: 0;
+  display: flex;
 }
 
-.searchJobCont {
+.searchJobCont,
+.searchJobLocation {
   display: flex;
+  align-items: center;
   min-width: 110px;
   background-color: #fff;
   padding: 15px;
   gap: 8px;
   padding-right: 30px;
+  position: relative;
+  border: none;
+
   .searchIcon {
     width: 20px;
   }
-
+  .searchLocation,
   .searchJob {
     border: none;
   }
@@ -44,4 +50,23 @@
   width: 80px;
   background-color: rgb(39, 64, 89);
   color: #fff;
+}
+.searchJobCont {
+  padding-right: 60px;
+}
+.searchJobLocation {
+  padding-left: 60px;
+  padding-right: 5px;
+  border: none;
+}
+.searchForm > .searchJobCont:first-child::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 25%;
+  background: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
 }

@@ -25,10 +25,14 @@ export default function SearchBar() {
               aria-label="Должность или компания"
             />
           </div>
-          <div className={styles.searchJobCont}>
-            <img className={styles.searchIcon} src={Location} alt="Location" />
+          <div className={styles.searchJobLocation}>
+            <img
+              className={styles.locationIcon}
+              src={Location}
+              alt="Location"
+            />
             <input
-              className={styles.searchJob}
+              className={styles.searchLocation}
               type="text"
               placeholder="Город, Страна"
               aria-label="Город, Страна"

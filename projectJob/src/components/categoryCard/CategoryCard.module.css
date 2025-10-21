@@ -1,0 +1,24 @@
+.cardCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  min-width: 140px;
+  min-height: 140px;
+  background-color: #fff;
+  padding: 16px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  .cardImg {
+    width: 20px;
+  }
+  .cardTitle {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+  }
+}
+.cardSpecial {
+  background-color: #cde7ff;
+  border: 1.5px solid rgba(0, 0, 0, 0.15);
+  box-shadow: none;
+}

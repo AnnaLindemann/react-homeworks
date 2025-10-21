@@ -1,0 +1,13 @@
+.footerDownCont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  margin-left: 65px;
+  margin-right: 45px;
+}
+.footerImgCont {
+  display: flex;
+  gap: 25px;
+  justify-content: space-between;
+}

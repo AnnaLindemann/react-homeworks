@@ -1,12 +1,9 @@
 import "./App.css";
-import Header from "./components/header/Header";
-import SearchBar from "./components/searchBar/SearchBAr";
-
+import Main from "./pages/main";
 function App() {
   return (
     <>
-      <Header />
-      <SearchBar />
+      <Main />
     </>
   );
 }

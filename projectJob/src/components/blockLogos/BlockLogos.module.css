@@ -1,0 +1,25 @@
+section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35px;
+}
+.blockTitleCont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .blockTitle {
+    color: rgb(135, 135, 135);
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 30px;
+  }
+}
+.imgCont {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  img {
+    width: 80px;
+  }
+}

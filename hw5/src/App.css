@@ -1,0 +1,19 @@
+.mainCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  min-height: 100vh;
+  gap: 2rem;
+}
+
+.spotifyImgCont {
+  display: flex;
+  align-item: start;
+  min-width: 100vw;
+  margin-bottom: 5rem;
+}
+.spotifyImg {
+  padding: 1rem;
+  max-height: 1.5rem;
+}

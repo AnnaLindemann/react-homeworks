@@ -1,0 +1,24 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 16px;
+
+  background-color: #1ed760;
+  color: #0b0b10;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.logo:hover {
+  background-color: #1181f1;
+  color: #0b0b10;
+  transform: translateY(-4px) scale(1.08);
+}
+
+.logo svg {
+  width: 3.75rem;
+  height: 3.75rem;
+}

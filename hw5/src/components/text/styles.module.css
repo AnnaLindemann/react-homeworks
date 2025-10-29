@@ -1,0 +1,18 @@
+.textCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+.textTitle {
+  color: #1ed760;
+  font-width: 700;
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+.textContent {
+  color: #1ed760;
+  font-width: 700;
+  font-size: clamp(1rem, 2.5vw, 2rem);
+}

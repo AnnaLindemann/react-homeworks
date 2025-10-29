@@ -1,0 +1,8 @@
+.itemCont {
+  display: flex;
+  gap: 0.5rem;
+  border: 0.2rem solid #1ed760;
+  padding: 1.5rem;
+  border-radius: 3rem;
+  margin: 0 1rem;
+}

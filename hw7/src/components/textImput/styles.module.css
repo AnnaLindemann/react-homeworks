@@ -1,0 +1,6 @@
+.inputBtn {
+  background-color: rgb(5, 92, 37);
+  color: azure;
+  border-radius: 0 0.5rem 0.5rem 0;
+  cursor: pointer;
+}

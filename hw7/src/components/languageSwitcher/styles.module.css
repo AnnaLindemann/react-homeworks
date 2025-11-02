@@ -1,0 +1,20 @@
+.title {
+  color: rgb(70, 68, 68);
+}
+.btn {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  background-color: rgb(62, 211, 62);
+  border-radius: 0.5rem;
+  border: 0.1rem solid green;
+  cursor: pointer;
+}
+.active {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  background-color: rgb(5, 92, 37);
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgb(92, 194, 131);
+  cursor: pointer;
+  color: white;
+}

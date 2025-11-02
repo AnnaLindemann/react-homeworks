@@ -1,0 +1,11 @@
+.mainCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(17, 236, 163);
+  gap: 1rem;
+  padding: 1rem;
+  max-width: fit-content;
+  border-radius: 1rem;
+}

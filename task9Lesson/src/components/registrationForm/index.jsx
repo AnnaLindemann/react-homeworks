@@ -1,7 +1,8 @@
 import { useForm } from 'react-hook-form'
 import { useUser } from '../../context/useUser'
+import styles from './styles.module.css'
 const userLoginValidation = {
-  required: 'This filed is required!',
+  required: 'This file is required!',
   maxLength: {
     value: 26,
     message: 'User name should consist of not more then 26 chars',
@@ -17,7 +18,7 @@ const userLoginValidation = {
 }
 
 const userEmailValidation = {
-  required: 'This filed is required!',
+  required: 'This file is required!',
   pattern: {
     value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
     message: 'Enter a valid email',
@@ -25,7 +26,7 @@ const userEmailValidation = {
 }
 
 const userPasswordValidation = {
-  required: 'This filed is required!',
+  required: 'This file is required!',
   pattern: {
     value: /^.{6,}$/,
     message: 'Enter a valid password',
@@ -47,26 +48,36 @@ export default function RegistrationForm() {
     loginUser(user)
   }
   return (
-    <form onSubmit={handleSubmit(handleFormSubmit)}>
+    <form className={styles.formCont} onSubmit={handleSubmit(handleFormSubmit)}>
       <input
         type="text"
         {...register('login', userLoginValidation)}
         placeholder="Login"
       />
-      {errors.login && <p>{errors.login.message}</p>}
+      {errors.login && (
+        <p style={{ color: 'red', fontWeight: 700 }}>{errors.login.message}</p>
+      )}
       <input
         type="email"
         {...register('email', userEmailValidation)}
         placeholder="Email"
       />
-      {errors.email && <p>{errors.email.message}</p>}
+      {errors.email && (
+        <p style={{ color: 'red', fontWeight: 700 }}>{errors.email.message}</p>
+      )}
       <input
         type="text"
         {...register('password', userPasswordValidation)}
         placeholder="Password"
       />
-      {errors.password && <p>{errors.password.message}</p>}
-      <button type="submit">Log in</button>
+      {errors.password && (
+        <p style={{ color: 'red', fontWeight: 700 }}>
+          {errors.password.message}
+        </p>
+      )}
+      <button className={styles.formBtn} type="submit">
+        Log in
+      </button>
     </form>
   )
 }

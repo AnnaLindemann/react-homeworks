@@ -1,0 +1,28 @@
+.userCont {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(167, 29, 231);
+  max-width: fit-content;
+  padding: 1rem;
+  justify-content: center;
+  border-radius: 0.5rem;
+  gap: 1rem;
+  border: 0.2rem solid rgb(195, 116, 231);
+}
+.userTitle {
+  color: rgb(238, 203, 247);
+  align-self: center;
+}
+.userContent {
+  padding-left: 0.5rem;
+  color: rgb(238, 203, 247);
+}
+.userBtn {
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  max-width: fit-content;
+  color: aliceblue;
+  background-color: rgb(139, 8, 172);
+  align-self: center;
+}

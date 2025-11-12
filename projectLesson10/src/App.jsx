@@ -10,12 +10,11 @@ function App() {
   return (
     <PostProvider>
 <Header/>
-<div>
-  <div>
-<h2>List of Posts</h2>
+<div className='mainCont'>
+  <div className='listCont'>
 <PostList/></div>
-<div>
-  <h2>Write the post</h2>
+<div className='formCont'>
+
   <PostForm/>
 </div>
    </div> </PostProvider>

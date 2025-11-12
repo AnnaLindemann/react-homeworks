@@ -1,5 +1,6 @@
 import { usePostContext } from "../../context/PostsContext";
 import Post from "../post";
+import styles from "./styles.module.css"
 
 export default function PostList(){
   const{state,actions} = usePostContext()
@@ -13,7 +14,7 @@ if(isLoading === true){
   return <p>Oops!Something went wrong!</p>
 }
 else if(!isLoading && posts.length === 0) {
-  return <p>There is not post yet</p>
+  return <p className={styles.postListCont}>There is not post yet</p>
 }
 
 else {
@@ -22,13 +23,16 @@ else {
   const visablePosts = posts.slice(start,end)
   const totalPages = Math.ceil(posts.length / pageSize);
   return(
-    <div>
+    <div className={styles.postListCont}>
+      <h2 className={styles.listTitle}>List of Posts</h2>
       {visablePosts.map((visablePost) => 
-         <div key={visablePost.id}><Post onDelete={()=> deletePost(visablePost.id)} id={visablePost.id} title = {visablePost.title} text={visablePost.text} avatar={visablePost.avatar}/></div>)
+         <div className={styles.postItemCont} key={visablePost.id}><Post onDelete={()=> deletePost(visablePost.id)} id={visablePost.id} title = {visablePost.title} text={visablePost.text} avatar={visablePost.avatar}/></div>)
       }
-      <button onClick={prevPage} disabled={currentPage === 1}>Previosly</button>
-      <button onClick={nextPage} disabled={currentPage === totalPages || totalPages === 0}>Next</button>
-    </div>
+      <div className={styles.btnNavCont}>
+      <button className={styles.btnNav} onClick={prevPage} disabled={currentPage === 1}>Previosly</button>
+      <button className={styles.btnNav}  onClick={nextPage} disabled={currentPage === totalPages || totalPages === 0}>Next</button>
+   </div> 
+   </div>
     )
 }
 

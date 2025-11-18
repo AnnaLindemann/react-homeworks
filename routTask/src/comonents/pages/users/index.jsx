@@ -1,4 +1,5 @@
 import Link from "../../link";
+import styles from "./styles.module.css"
 
 
 export const usersMas = [
@@ -11,11 +12,11 @@ export function Users(){
   return(
     
     
-        <div>
-        <ul>
+        <div >
+        <ul >
           {usersMas.map((userItem)=> {
             return(
-          <li key={userItem.id}><Link  path={"/users/userprofiel/"+userItem.id} title={userItem.name}/></li>)})}
+          <li  className={styles.usersLi}  key={userItem.id}><Link path={"/users/userprofiel/"+userItem.id} className={styles.usersStyle}  title={userItem.name}/></li>)})}
           </ul>
           </div>
       )

@@ -1,0 +1,12 @@
+.usersStyle{
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+
+}
+
+.usersLi{
+  padding: 0.5rem;
+  cursor: pointer;
+margin-left: 2rem;
+}

@@ -1,0 +1,12 @@
+.navCont{
+  width: 100%;
+  display: flex;
+  background-color: rgb(29, 26, 26);
+  padding:1rem 3rem ;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.navItem{
+  color: aliceblue;
+  text-decoration: none;
+}

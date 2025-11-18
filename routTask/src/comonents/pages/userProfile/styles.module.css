@@ -1,0 +1,14 @@
+.profileCont{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  margin-left: 2rem;
+  max-width: fit-content;
+}
+.profileBtn{
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: aliceblue;
+  background-color: rgb(29, 26, 26);;
+}

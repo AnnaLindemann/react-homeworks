@@ -1,6 +1,9 @@
 import { NavLink } from "react-router";
 
-export default function Link({path, title}){
+
+export default function Link({path, title,className}){
+
   return(
-  <NavLink style={({isActive}) => ({fontWight: isActive ? "800" : "500"})} to={path}>{title}</NavLink>)
+  <NavLink to={path} className={className} style={({isActive}) => ({fontSize: isActive ? "1.5rem" : "1rem"})}>{title}</NavLink>);
+
 }

@@ -1,5 +1,6 @@
 import { useParams,useNavigate } from "react-router";
 import { usersMas } from "../users";
+import styles from "./styles.module.css"
 
 export default function UserProfile(){
   const params = useParams()
@@ -13,11 +14,11 @@ if(!user){
 
 } else{
   return( 
-    <div>
+    <div className={styles.profileCont}>
       <h2>id: {params.userId}</h2>
       <p>User Name: {user.name}</p>
       <p>User Bio: {user.bio}</p>
-      <button onClick={()=> navigate("/users")}>Back to users</button>
+      <button  className={styles.profileBtn} onClick={()=> navigate("/users")}>Back to users</button>
       </div>
   )
 }

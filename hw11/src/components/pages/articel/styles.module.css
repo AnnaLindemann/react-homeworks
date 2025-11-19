@@ -1,0 +1,25 @@
+.artCont{
+    display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.artTitle{
+  color: rgb(233, 238, 158);
+  font-size: 2rem;
+}
+
+.artContent{
+  font-size: 1.2rem;
+  color: rgb(233, 238, 158) ;
+}
+.artBtn{
+  padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    color:  rgb(16, 185, 135);
+    background-color:rgb(233, 238, 158)  ;
+    border: 0.1rem solid rgb(170, 177, 73) ;
+}

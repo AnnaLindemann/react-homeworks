@@ -13,8 +13,8 @@ setValue(updatedInput);
 
 }
   return (
-    <div>
-      <h2>Current and previous Value</h2>
+    <div className='mainCont'>
+      <h2>Current and previous Value:</h2>
     <form onChange={handleOnChange}>
       <input type="text" placeholder='Insert your text.' />
      <ValueDisplay value={value}/>

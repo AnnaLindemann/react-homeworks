@@ -38,9 +38,9 @@ setAnimationInterval(newAnimationTime)}
 }
   return(
     <form className={styles.formCont} onSubmit={(e) => e.preventDefault()}>
-<input onChange={getAnimationInterval} type="text" placeholder="Insert the animation time." />
-<p ref={paragrphTextRef}>Here you can see some text.</p>
-<button onClick={handleToggleBtn} type="submit">Click to open/close the text.</button>
+<input className={styles.formInput} onChange={getAnimationInterval} type="text" placeholder="Insert the animation time in ms." />
+<p className={styles.formParagraph} ref={paragrphTextRef}>Here you can see some text.</p>
+<button className={styles.formBtn}onClick={handleToggleBtn} type="submit">Click to open/close the text.</button>
     </form>
   )
 }

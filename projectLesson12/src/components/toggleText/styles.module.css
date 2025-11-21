@@ -3,4 +3,27 @@
   flex-direction: column;
   gap: 0.5rem;
   max-width: fit-content;
+  margin: 2rem;
+  padding: 2rem;
+  background-color: aquamarine;
+  border-radius: 0.5rem;
 }
+.formInput{
+  border-radius: 0.5rem;
+  padding: 0.2rem;
+  
+
+  }
+  .formParagraph{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: rgb(3, 3, 102);
+  }
+  .formBtn{
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+    cursor: pointer;
+    background-color:rgb(3, 3, 102) ;
+    color: aliceblue;
+    font-weight: 600;
+  }

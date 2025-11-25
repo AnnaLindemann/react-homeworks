@@ -6,10 +6,10 @@ function App() {
 
 
   return (
-    <>
+    <main className='mainCont'>
       <TodoForm/>
       <TodoList/>
-    </>
+    </main>
   )
 }
 

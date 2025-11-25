@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { connect } from "react-redux";
 import { addAction } from "../../redux/actions";
+import styles from "./styles.module.css"
 
 function TodoForm ({dispatch}){
   const [title,setTitle] = useState("");
@@ -16,9 +17,9 @@ setTitle("")
 
 
 return(
-  <form onSubmit={handleSubmit} >
-    <input onChange={(e) =>(setTitle(e.target.value))} value={title} type="text" placeholder="Insert your task." />
-    <button type="submit">Add task</button>
+  <form className={styles.formCont} onSubmit={handleSubmit} >
+    <input className={styles.formInput} onChange={(e) =>(setTitle(e.target.value))} value={title} type="text" placeholder="Insert your task." />
+    <button className={styles.formBtn} type="submit">Add task</button>
   </form>
 )
 

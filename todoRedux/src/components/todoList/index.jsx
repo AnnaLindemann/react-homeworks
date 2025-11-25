@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import { deleteAction } from "../../redux/actions";
 import TodoItem from "../todoItem";
+import styles from "./styles.module.css"
 
 function TodoList({todos,dispatch}){
 if(!todos.length){
@@ -13,7 +14,7 @@ const handleDelete = (id) => {
 }
   return(
    
-      <ul>
+      <ul className={styles.ulItem}>
         {todos.map((todo) => 
           <TodoItem key={todo.id} todo={todo} onDelete={handleDelete} />
         )}

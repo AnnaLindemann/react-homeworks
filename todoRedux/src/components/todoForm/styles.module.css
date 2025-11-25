@@ -1,0 +1,19 @@
+.formCont{
+  display: flex;
+  gap: 0.5rem;
+}
+.formInput{
+  border-radius: 0.3rem;
+padding: 0.4rem;
+border: 0.1rem solid rgb(229, 157, 69);
+}
+.formBtn{
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+  background-color: bisque;
+  border: 0.1rem solid rgb(229, 157, 69);
+  cursor: pointer;
+}
+.formBtn:active{
+  background-color:rgb(215, 177, 130) ;
+}

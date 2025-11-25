@@ -1,0 +1,12 @@
+.mainCont{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem;
+  padding: 2rem;
+  background-color: aquamarine;
+  border-radius: 0.5rem;
+  max-width: fit-content;
+  gap: 1rem;
+}

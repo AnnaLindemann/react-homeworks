@@ -1,0 +1,63 @@
+.overall {
+  position: fixed;       
+  inset: 0;              
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  align-items: center;  
+  justify-content: center; 
+  z-index: 1000;         
+}
+
+
+.modalCont {
+  background-color: #ffffff;
+  padding: 16px 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%;          
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.modalTitle {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+.modalInput {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font: inherit;
+}
+
+
+.btnCont {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+
+.cancelButton {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+
+.saveButton {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  background-color:  rgb(27, 23, 23); 
+  color: #ffffff;
+  cursor: pointer;
+}
+

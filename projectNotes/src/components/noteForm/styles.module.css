@@ -1,0 +1,11 @@
+.noteCont{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 100%;
+} 
+.noteCont input,
+.noteCont button {
+  width: 100%;
+  padding: 0.3rem;
+}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AddNote } from "../../redux/actions";
 import { connect } from "react-redux";
+import styles from "./styles.module.css"
 function NoteForm({dispatch}) {
   const [noteData, setNoteData] = useState({
     title: "",
@@ -19,10 +20,15 @@ function NoteForm({dispatch}) {
 dispatch(AddNote({
   id: Math.random(),
   ...noteData
-}))
+})
+)
+setNoteData({
+  title: "",
+  text: "",
+});
   }
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={styles.noteCont} onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="title"

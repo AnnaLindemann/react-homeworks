@@ -1,0 +1,8 @@
+.mainCont{
+  display: flex;
+   background-color: rgb(188, 250, 175);
+  max-width: fit-content;
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+}

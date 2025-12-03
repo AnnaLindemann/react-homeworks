@@ -1,0 +1,9 @@
+.mainCont{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: fit-content;
+  padding: 1rem;
+}

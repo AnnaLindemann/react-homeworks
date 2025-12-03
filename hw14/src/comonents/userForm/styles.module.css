@@ -1,0 +1,19 @@
+.formCont{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.formCont input {
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+}
+.formCont button {
+border-radius: 0.5rem;
+  padding: 0.3rem;
+  background-color: aqua;
+  color: rgb(79, 93, 107);
+  font-weight: 700;
+  font-size: 1.1rem;
+}

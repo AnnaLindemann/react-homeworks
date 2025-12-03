@@ -1,0 +1,16 @@
+.userCont{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: aqua;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid black;
+}
+
+.userCont span{
+font-size: 1.2rem;
+font-weight: 700;
+color: rgb(79, 93, 107);
+
+}

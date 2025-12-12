@@ -2,10 +2,10 @@ import { AppBar,Toolbar,Typography } from "@mui/material";
 
 function Header(){
    return(
-   <AppBar>
-  <Tooltip>
+   <AppBar position="sticky" t>
+  <Toolbar>
     <Typography variant='h4'>Dialog App</Typography>
-  </Tooltip>
+  </Toolbar>
       </AppBar>
       )
 }

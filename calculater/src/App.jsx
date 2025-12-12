@@ -9,9 +9,12 @@ function App() {
     <>
      <AppBar position="static">
         <Toolbar>
-          <Typography>Calculator App</Typography>
+          <Typography variant="h6" component="div">
+            Calculator App
+          </Typography>
         </Toolbar>
       </AppBar>
+
       <Calculator/>
       
     </>

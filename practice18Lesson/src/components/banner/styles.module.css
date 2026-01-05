@@ -1,0 +1,16 @@
+.banner {
+  margin-top: 2.5rem;          
+}
+
+.bannerCont {
+  max-width: 75rem;
+  margin: 2.5rem auto 0 auto;
+  padding: 0 2rem;
+}
+
+.bannerImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+}

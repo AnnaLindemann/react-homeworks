@@ -1,0 +1,103 @@
+.footer {
+  background-color: #2f2f2f;
+  color: #f5f5f5;
+  padding: 2.5rem 0;        
+  font-size: 0.75rem;      
+}
+
+.footerInner {
+  max-width: 75rem;        
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;               
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contactsTitle {
+  font-size: 0.875rem;     
+  font-weight: 500;
+  margin: 0 0 0.75rem 0;    
+}
+
+.contactsLine {
+  margin: 0;
+  line-height: 1.5;
+  color: #b0b0b0;
+}
+
+
+.socialList {
+  list-style: none;
+  display: flex;
+  gap: 1rem;                
+  padding: 0;
+  margin: 0;
+}
+
+.socialList li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.socialIcon {
+  width: 1.5rem;           
+  height: 1.5rem;
+  display: block;
+}
+
+
+.bottomRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  margin: 0;
+  color: #8c8c8c;
+}
+
+
+.emailBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 14rem;         
+}
+
+.emailLabel {
+  font-size: 0.75rem;
+  color: #8c8c8c;
+  margin-bottom: 0.25rem;  
+}
+
+.emailInput {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #555555;
+  background: transparent;
+  color: #f5f5f5;
+  padding: 0.25rem 0;
+  font-size: 0.75rem;
+}
+
+.emailInput:focus {
+  outline: none;
+  border-bottom-color: #ffffff;
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "image": "/shoe.png",
+    "name": "Men's Sneakers Nike Air Zoom Pegasus",
+    "price": 360
+  },
+  {
+    "id": 2,
+    "image": "/shoe.png",
+    "name": "Men's Sneakers Nike Air Zoom Pegasus",
+    "price": 234
+  },
+  {
+    "id": 3,
+    "image": "/shoe.png",
+    "name": "Men's Sneakers Nike Air Zoom Pegasus",
+    "price": 134
+  },
+  {
+    "id": 4,
+    "image": "/shoe2.png",
+    "name": "Men's Sneakers Nike Air Zoom Pegasus",
+    "price": 175
+  }
+]
+

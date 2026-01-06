@@ -1,0 +1,12 @@
+.productSection {
+  max-width: 75rem;        
+  margin: 2rem auto;      
+  padding: 0 2rem;         
+}
+
+.productTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: left;        
+}

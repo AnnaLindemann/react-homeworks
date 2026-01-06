@@ -1,0 +1,45 @@
+.box {
+  background: #f2f2f2;
+  border-radius: 0.75rem;
+  padding: 1.75rem 1.75rem 2rem;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111;
+  text-align: left;
+  margin-bottom: 1.25rem;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 6rem;
+}
+
+.item {
+  font-size: 0.8rem;
+  color: #555;
+  line-height: 1.2;
+}
+
+.line {
+  height: 0.0625rem;
+  background: #d9d9d9;
+  margin: 1.25rem 0 1.1rem;
+}
+
+.priceLabel {
+  font-size: 0.625rem;
+  letter-spacing: 0.12em;
+  color: #777;
+  margin-bottom: 0.4rem;
+}
+
+.total {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111;
+}

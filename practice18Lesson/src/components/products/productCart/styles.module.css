@@ -62,3 +62,7 @@
   height: 1.5rem;
   display: block;
 }
+
+.addButton:active {
+  transform: scale(0.95);
+}

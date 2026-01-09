@@ -1,0 +1,14 @@
+.userCont{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.userTitle{
+  padding: 1rem;
+}
+.userUl{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

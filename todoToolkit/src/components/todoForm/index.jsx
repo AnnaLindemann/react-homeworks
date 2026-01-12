@@ -26,7 +26,7 @@ setTodoData(newTodo);
 
 }
   return(
-    <Box component="form"onSubmit={handleSubmit} sx={{ p: 2 }} >
+    <Box component="form" onSubmit={handleSubmit} sx={{ p: 2 }} >
       <TextField fullWidth placeholder="Todo task" value={todoData} onChange={(event) => handleChange(event) } variant="outlined" sx={{ mb: 2 }}/>
       <Button type="submit" fullWidth variant="contained" color="success"  >Add todo</Button>
     </Box>

@@ -1,17 +1,14 @@
+import { Container, Stack } from "@mui/material";
+import TodoForm from "./components/todoForm";
+import TodoList from "./components/todoList";
 
-import './App.css'
-import TodoForm from './components/todoForm'
-import TodoItem from './components/todoItem'
-
-function App() {
-  
-
+export default function App() {
   return (
-    <>
-     <TodoForm/>
-     <TodoItem/>
-    </>
-  )
+    <Container maxWidth="md" sx={{ py: 3 }}>
+      <Stack spacing={4}>
+        <TodoForm />
+        <TodoList />
+      </Stack>
+    </Container>
+  );
 }
-
-export default App

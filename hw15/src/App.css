@@ -1,0 +1,12 @@
+.mainCont{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: fit-content;
+  margin: 1rem;
+  background-color: aqua;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+}

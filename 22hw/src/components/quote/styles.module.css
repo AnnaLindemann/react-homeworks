@@ -1,0 +1,54 @@
+.quoteContainer {
+  padding: 1rem;
+  border: 0.0625rem solid #fb7185;
+  border-radius: 0.9rem;
+  background: #fff1f2; /* розоватый фон */
+}
+
+
+.quoteCard {
+  padding: 1rem;
+  border: 0.0625rem solid #fecdd3;
+  border-radius: 0.9rem;
+  background: #ffffff;
+}
+
+.quoteText {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.55;
+  color: #111827;
+}
+
+.authorText {
+  margin: 0.75rem 0 0;
+  font-size: 0.9rem;
+  color: #9f1239;
+  font-weight: 700;
+}
+
+.button {
+  margin-top: 1rem;
+  padding: 0.65rem 0.9rem;
+  border-radius: 0.75rem;
+  border: 0.0625rem solid #fb7185;
+  background: #fb7185; /* яркая кнопка */
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.infoText {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  color: #9f1239;
+  font-weight: 600;
+}
+
+.errorText {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  color: #be123c;
+  font-weight: 700;
+}

@@ -2,10 +2,19 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
 const BASE_URL = 'https://jsonplaceholder.typicode.com'
 
-export const getUsers = createAsyncThunk('user/getUsers', async () => {
-  const response = await axios(`${BASE_URL}/users`)
-  return response.data
-})
+
+export const getUsers = createAsyncThunk(
+  "user/getUsers",
+  async (_, { rejectWithValue }) => {                 //first argument - from argument action; second argument Thunk API: rectithValue, dispatch, fullfieldithValue,getState(just for Info, because it can mutate the original state)  
+    const response = await axios(`${BASE_URL}/users`);
+    if (response.status < 400) {
+      return response.data;
+    } else {
+      throw new Error("Client Error");
+    }
+  }
+);
+
 const userSlice = createSlice({
   name: 'user',
   initialState: {

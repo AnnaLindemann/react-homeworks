@@ -13,6 +13,7 @@ connectDB();
 app.use(cors());
 app.use(bodyParser.json());
 
+
 // Маршруты
 app.use('/api/auth', authRoutes);
 

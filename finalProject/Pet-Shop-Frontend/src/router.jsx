@@ -7,6 +7,7 @@ import Category from "./pages/category";
 import NotFound from "./pages/notFound";
 import Product from "./pages/product";
 import Products from "./pages/products";
+import Sale from "./pages/sale";
 
 export default function Router(){
 
@@ -19,6 +20,7 @@ return (
 <Route path="/categories/:id" element={<Category/>}/>
 <Route path="/products" element={<Products/>}/>
 <Route path="/products/:id" element={<Product/>}/>
+<Route path="/sale" element={<Sale/>}/>
 <Route path="*" element={<NotFound/>}/>
 </Route>
   </Routes>

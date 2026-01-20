@@ -35,6 +35,10 @@ export const theme = createTheme({
 
   palette: {
     mode: "light",
+    primary: {
+    main: "rgba(18, 80, 243, 1)", 
+    contrastText: "#FFFFFF",
+  },
     background: {
       default: "#FFFFFF",
       paper: "#F3F4F6",

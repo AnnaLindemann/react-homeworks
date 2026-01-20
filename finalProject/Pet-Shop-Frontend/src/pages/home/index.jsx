@@ -1,4 +1,11 @@
+import PromoSection from "../../components/home/promoSection"
+
 export default function Home(){
 
-  return <h2>Home</h2>
+  return (
+  <div>
+  <PromoSection/>
+
+  </div>
+  )
 }

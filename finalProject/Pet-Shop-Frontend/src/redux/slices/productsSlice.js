@@ -1,10 +1,9 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import {api} from "../../api/api";
 
-
-export const categoriesGet = createAsyncThunk("categories/categoriesGet", async (_, {rejectWithValue}) => {
+export const productsGet = createAsyncThunk("products/productsGet", async (_, {rejectWithValue}) => {
   try{
-    const response = await api.get("/categories/all")
+    const response = await api.get("/products/all")
     return response.data;
   } catch (error) {
   const message = error.message;
@@ -12,8 +11,8 @@ export const categoriesGet = createAsyncThunk("categories/categoriesGet", async 
   }
 })
 
-const categoriesSlice = createSlice({
-  name: "categories",
+const productsSlice = createSlice({
+  name: "products",
   initialState:{
     items: [],
     status: "idle",
@@ -22,16 +21,16 @@ const categoriesSlice = createSlice({
   reducers:{},
   extraReducers:(builder) => {
    builder
-   .addCase(categoriesGet.pending, (state) => {
+   .addCase(productsGet.pending, (state) => {
     state.status = "loading";
     state.error = null;
    })
-   .addCase(categoriesGet.fulfilled, (state, action) =>{
+   .addCase(productsGet.fulfilled, (state, action) =>{
     state.status = "succeeded";
     state.items = action.payload;
      state.error = null;
    })
-   .addCase(categoriesGet.rejected, (state,action) => {
+   .addCase(productsGet.rejected, (state,action) => {
     state.status = "failed"
     state.error = action.payload ?? action.error.message ?? "Unknown error"
    })
@@ -39,4 +38,4 @@ const categoriesSlice = createSlice({
 })
 
 
-export default categoriesSlice.reducer
+export default productsSlice.reducer

@@ -8,7 +8,7 @@ function BreadCrumbs({ items }) {
         const isLast = index === items.length - 1;
 
         return (
-          <div className={styles.breadCrumbsItem} key={index}>
+          <div className={`${styles.breadCrumbsItem} ${isLast ? styles.breadCrumbsItemLast : ""}`} key={index}>
             {item.to && !isLast ? (
               <Link to={item.to} className={styles.breadCrumbsLink}>
                 {item.label}

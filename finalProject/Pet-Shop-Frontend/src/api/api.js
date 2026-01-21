@@ -1,1 +1,14 @@
+import axios from "axios"
+
 export const API_URL = "http://localhost:3333"
+const api = axios.create({ baseURL: API_URL })
+
+export async function postSale(data){
+
+  try{
+  const response = await api.post("/sale/send",data)
+      return response.data  
+} catch(error){
+   throw error 
+}
+}

@@ -1,5 +1,5 @@
 import BreadCrumbs from "../../components/breadCrumbs"
-import { Link, useLocation, useNavigate } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 import { useDispatch,useSelector } from "react-redux"
 import { useEffect,useMemo } from "react"
 import { productsGet } from "../../redux/slices/productsSlice"
@@ -52,11 +52,6 @@ function setFilters(next,{ replace = false } = {}){
     const next = applySwapToRange(nextRaw);
     setFilters(next, { replace: true });
   }
-
-  function resetFilters() {
-    navigate({ pathname: "/products", search: clearSearch() }, { replace: false });
-  }
-
 
 
 let content = null

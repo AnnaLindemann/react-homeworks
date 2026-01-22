@@ -1,4 +1,4 @@
-import BreadCrumbs from "../../components/breadCrambs"
+import BreadCrumbs from "../../components/breadCrumbs"
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css"
 import { useDispatch,useSelector } from "react-redux";

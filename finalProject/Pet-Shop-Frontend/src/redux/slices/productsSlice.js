@@ -32,7 +32,7 @@ const productsSlice = createSlice({
    })
    .addCase(productsGet.rejected, (state,action) => {
     state.status = "failed"
-    state.error = action.payload ?? action.error.message ?? "Unknown error"
+    state.error = action.payload.message ?? action.error.message ?? "Unknown error"
    })
   }
 })

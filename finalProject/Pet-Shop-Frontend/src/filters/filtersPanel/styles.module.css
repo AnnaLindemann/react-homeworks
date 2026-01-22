@@ -1,0 +1,50 @@
+.panel {
+  margin: 1rem 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.label {
+  font-weight: 600;
+  margin-right: 0.75rem;
+}
+
+.priceGroup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sortGroup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.input {
+  width: 6.5rem;
+  height: 2.25rem;
+  border: 1px solid rgb(214, 211, 211);
+  border-radius: 0.5rem;
+  padding: 0 0.75rem;
+}
+
+.select {
+  height: 2.25rem;
+  border: 1px solid rgb(214, 211, 211);
+  border-radius: 0.5rem;
+  padding: 0 0.75rem;
+  background: white;
+}
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  user-select: none;
+}

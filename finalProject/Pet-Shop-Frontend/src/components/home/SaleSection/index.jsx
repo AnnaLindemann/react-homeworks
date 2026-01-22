@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { productsGet } from "../../../redux/slices/productsSlice";
 import { API_URL } from "../../../api/api";
 
-function getDiscountPercent(item) {
+export function getDiscountPercent(item) {
   if (item?.discont_price === null) return null;
   if (typeof item.price !== "number" || typeof item.discont_price !== "number") return null;
   if (item.price <= 0 || item.discont_price >= item.price) return null;

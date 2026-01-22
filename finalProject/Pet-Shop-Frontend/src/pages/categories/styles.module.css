@@ -3,7 +3,6 @@
   padding-block: 3.5rem;
 }
 
-
 .sectionHead {
   margin-bottom: 1.25rem;
 }
@@ -16,48 +15,7 @@
   white-space: nowrap;
 }
 
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.25rem;
-}
-
-
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
-
-  text-decoration: none;
-  color: inherit;
-}
-
-.cardImg {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-
-  object-fit: cover;
-  object-position: center;
-
-  border-radius: 1rem;
-  background: #f2f2f2;
-}
-
-.cardTitle {
-  display: block;
-  text-align: center;
-
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.2;
-
-  color: #222;
-}
-
-
+/* Loading skeleton items (рендерятся внутри CardsGrid) */
 .skeletonCard {
   width: 100%;
   aspect-ratio: 4 / 5;
@@ -66,7 +24,7 @@
   background: #f2f2f2;
 }
 
-
+/* Error state */
 .errorBox {
   grid-column: 1 / -1;
 
@@ -110,13 +68,6 @@
   border-color: #cfcfcf;
 }
 
-
-@media (max-width: 64rem) {
-  .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
 @media (max-width: 48rem) {
   .section {
     padding-inline: 1rem;
@@ -126,14 +77,6 @@
   .title {
     font-size: 2rem;
     white-space: normal;
-  }
-
-  .grid {
-    gap: 1.25rem;
-  }
-
-  .cardTitle {
-    font-size: 0.9375rem;
   }
 
   .errorBox {
@@ -150,9 +93,5 @@
 
   .title {
     font-size: 1.75rem;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
   }
 }

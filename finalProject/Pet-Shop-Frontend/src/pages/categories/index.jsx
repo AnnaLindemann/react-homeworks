@@ -1,10 +1,11 @@
 import BreadCrumbs from "../../components/breadCrumbs"
-import { Link } from "react-router-dom";
 import styles from "./styles.module.css"
 import { useDispatch,useSelector } from "react-redux";
 import { useEffect } from "react";
 import { categoriesGet } from "../../redux/slices/categoriesSlice";
-import { API_URL } from "../../api/api";
+import CardsGrid from "../../components/ui/cardsGrid";
+import CategoryCard from "../../components/ui/categoriesCard";
+
 
 
 export const BREADCRUMBS = {
@@ -47,12 +48,7 @@ if (status === "idle")
         </button>
       </div>)
  } else if (status === "succeeded") {
-  content = items.map((item) => (
-    <Link key={item.id} className={styles.card} to={`/categories/${item.id}`}>
-      <img className={styles.cardImg} src={`${API_URL}${item.image}`} alt={item.title} />
-        <span className={styles.cardTitle}>{item.title}</span>
-    </Link>
-  ))
+  content = items.map((item) => <CategoryCard key={item.id} item={item} />);
  }
 
   return (
@@ -63,8 +59,7 @@ if (status === "idle")
   <div className={styles.sectionHead}>
     <h2 className={styles.title}>Categories</h2>
   </div>
-  <div className={styles.grid}>{content}</div>
-  </section>
-    
+  <CardsGrid>{content}</CardsGrid>
+  </section>    
   )
 }

@@ -3,12 +3,12 @@ import { Link, useLocation, useNavigate } from "react-router-dom"
 import { useDispatch,useSelector } from "react-redux"
 import { useEffect,useMemo } from "react"
 import { productsGet } from "../../redux/slices/productsSlice"
-import { API_URL } from "../../api/api"
 import styles from "./styles.module.css"
-import { getDiscountPercent } from "../../components/home/SaleSection"
 import FiltersPanel from "../../filters/filtersPanel"
 import { applyProductFilters } from "../../filters/engine"
 import { parseFiltersFromSearch, buildSearchFromFilters, applySwapToRange,clearSearch } from "../../filters/query"
+import CardsGrid from "../../components/ui/cardsGrid"
+import ProductCard from "../../components/ui/productCard"
 
 export const BREADCRUMBS = {
     products: [
@@ -88,24 +88,9 @@ if(status === "loading"){
         </div>
       );
     } else {
-    content = visibleProducts.map((item) => {
-      const percent = getDiscountPercent(item);
-
-      return (
-    <Link className={styles.card} key={item.id} to={`/products/${item.id}`}>
-      <div className={styles.imageWrap}>
-      <img className={styles.cardImg} src={`${API_URL}${item.image}`} alt={item.title} />
-      {percent !== null ? <span className={styles.badge}>-{percent}%</span> : null}
-      </div>
-      <span className={styles.cardTitle}>{item.title}</span>
-      <div className={styles.priceRow}>
-      {item.discont_price ? <span className={styles.priceNew}>${item.discont_price}</span> : null}
-      <span className={item.discont_price ? styles.priceOldLine: styles.priceOld} >${item.price}</span>
-      </div>
-    </Link>
-    );
+    content = visibleProducts.map((item) => <ProductCard key={item.id} item={item} />);
   
-  })
+ 
     }
 }
 
@@ -119,9 +104,9 @@ if(status === "loading"){
       <div>
         <FiltersPanel value={filters} onChange={setFilters} onApplyPriceRange={applyPriceRange} showDiscount={true} discountLocked={false}/>
         </div>
-    <div className={styles.grid}>
+    <CardsGrid>
       {content}
-    </div>
+    </CardsGrid>
     </div>
     </section>
   ) 

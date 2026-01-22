@@ -3,14 +3,12 @@ import styles from "./styles.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { productsGet } from "../../../redux/slices/productsSlice";
-import { API_URL } from "../../../api/api";
+import CardsGrid from "../../ui/cardsGrid";
+import ProductCard from "../../ui/productCard";
 
-export function getDiscountPercent(item) {
-  if (item?.discont_price === null) return null;
-  if (typeof item.price !== "number" || typeof item.discont_price !== "number") return null;
-  if (item.price <= 0 || item.discont_price >= item.price) return null;
-  return Math.round(((item.price - item.discont_price) / item.price) * 100);
-}
+
+
+
 
 export default function SaleSection() {
   const dispatch = useDispatch();
@@ -46,25 +44,7 @@ export default function SaleSection() {
       </div>
     );
   } else if (status === "succeeded") {
-    content = fourItems.map((item) => {
-      const percent = getDiscountPercent(item);
-
-      return (
-        <Link key={item.id} className={styles.card} to={`/products/${item.id}`}>
-          <div className={styles.imageWrap}>
-            <img className={styles.cardImg} src={`${API_URL}${item.image}`} alt={item.title} />
-            {percent ? <span className={styles.badge}>-{percent}%</span> : null}
-          </div>
-
-          <span className={styles.cardTitle}>{item.title}</span>
-
-          <div className={styles.priceRow}>
-            <span className={styles.priceNew}>${item.discont_price}</span>
-            <span className={styles.priceOld}>${item.price}</span>
-          </div>
-        </Link>
-      );
-    });
+    content = fourItems.map((item) => <ProductCard key={item.id} item={item} />);
   }
 
   return (
@@ -76,7 +56,7 @@ export default function SaleSection() {
           All sales
         </Link>
       </div>
-      <div className={styles.grid}>{content}</div>
+      <CardsGrid>{content}</CardsGrid>
     </section>
   );
 }

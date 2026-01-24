@@ -1,12 +1,18 @@
-import { AppBar, Toolbar, Box, Stack, Button, IconButton, Drawer, List, ListItemButton,Typography, useTheme } from "@mui/material"
+import { Badge, AppBar, Toolbar, Box, Stack, Button, IconButton, Drawer, List, ListItemButton,Typography, useTheme } from "@mui/material"
 import MenuIcon from "@mui/icons-material/Menu";
 import Logo from "../../../assets/icons/logo.svg"
 import bagCart from "../../../assets/icons/bagCart.svg"
 import { NavLink,Link } from "react-router-dom"
 import { useState } from "react"
 import {useMediaQuery} from "@mui/material"
+import { useSelector } from "react-redux";
+import { selectTotalQty } from "../../../redux/slices/cartSlice";
+
+
 
 export default function Header(){
+
+  const totalQty = useSelector(selectTotalQty)
 
   const NAV_ITEMS = [
     {label: "Main Page", to:"/"},
@@ -19,6 +25,9 @@ const theme = useTheme();
 const openDrawer = () => setDrawerOpen(true);
 const closeDrawer = () => setDrawerOpen(false);
 const isMobile = useMediaQuery(theme.breakpoints.down("md"))  
+
+
+
   return(
     <AppBar position="static" elevation={0} sx={{bgcolor: "white", color:"black", }}>
      <Toolbar sx={{px: {xs: 2, md: 5}, display: "flex", alignItems: "center", gap: 2}}>
@@ -43,11 +52,13 @@ const isMobile = useMediaQuery(theme.breakpoints.down("md"))
     ))}
       </Stack>)}
       </Box>
-      <Box sx={{display: "flex", alignItems:"center"}}>
-        <IconButton component={Link} to="/cart" aria-label="Go to cart" sx={{width:48, height:48}}>
-        <Box component="img" src={bagCart} alt="Cart" sx={{width:38, height:38}}/>
-        </IconButton>
-      </Box>
+     <Box sx={{display:"flex",alignItems:"center"}}>
+  <IconButton component={Link} to="/cart" aria-label="Go to cart" sx={{width:48,height:48}}>
+    <Badge badgeContent={totalQty} invisible={totalQty<1} overlap="circular" sx={{"& .MuiBadge-badge":{minWidth:20,height:20,borderRadius:999,fontSize:12,fontWeight:700,lineHeight:1,bgcolor:"primary.main",color:"common.white",border:"2px solid",borderColor:"common.white",top:6,right:6,pointerEvents:"none"}}}>
+      <Box component="img" src={bagCart} alt="Cart" sx={{width:38,height:38}}/>
+    </Badge>
+  </IconButton>
+</Box>
       {/*mobile*/}
       <Drawer anchor="left" open={drawerOpen} onClose={closeDrawer}>
        <Box sx={{width:280, p:2}}>

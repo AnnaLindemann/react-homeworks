@@ -4,7 +4,7 @@ import { useDispatch,useSelector } from "react-redux";
 import { useEffect } from "react";
 import { categoriesGet } from "../../redux/slices/categoriesSlice";
 import CardsGrid from "../../components/ui/cardsGrid";
-import CategoryCard from "../../components/ui/categoriesCard";
+import CategoryCard from "../../components/categoryCard";
 
 
 

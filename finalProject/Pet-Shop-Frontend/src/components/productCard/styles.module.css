@@ -88,6 +88,34 @@
   color: #999;
   text-decoration: line-through;
 }
+.btnAdd,
+.btnAdded {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  height: 3.2rem;
+  border: 0;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btnAdd {
+  background: #0b60ff;
+  color: #fff;
+}
+
+.btnAdd:hover {
+  filter: brightness(0.95);
+}
+
+.btnAdded {
+  background: #0f0f0f;
+  color: #fff;
+  cursor: default;
+}
+
 
 @media (max-width: 48rem) {
   .cardTitle {

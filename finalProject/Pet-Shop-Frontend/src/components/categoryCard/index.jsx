@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
-import { API_URL } from "../../../api/api";
+import { API_URL } from "../../api/api";
 
 export default function CategoryCard({ item }) {
   return (

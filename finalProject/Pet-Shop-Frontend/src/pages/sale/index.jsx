@@ -8,8 +8,7 @@ import FiltersPanel from "../../filters/filtersPanel"
 import { applyProductFilters } from "../../filters/engine"
 import { parseFiltersFromSearch,buildSearchFromFilters,applySwapToRange,clearSearch } from "../../filters/query"
 import CardsGrid from "../../components/ui/cardsGrid"
-import ProductCard from "../../components/ui/productCard"
-
+import ProductCard from "../../components/productCard"
 
 const BREADCRUMBS = {
   sales: [

@@ -6,9 +6,10 @@ import { productsGet } from "../../redux/slices/productsSlice"
 import styles from "./styles.module.css"
 import FiltersPanel from "../../filters/filtersPanel"
 import { applyProductFilters } from "../../filters/engine"
-import { parseFiltersFromSearch, buildSearchFromFilters, applySwapToRange,clearSearch } from "../../filters/query"
+import { parseFiltersFromSearch, buildSearchFromFilters, applySwapToRange} from "../../filters/query"
 import CardsGrid from "../../components/ui/cardsGrid"
-import ProductCard from "../../components/ui/productCard"
+import ProductCard from "../../components/productCard"
+
 
 export const BREADCRUMBS = {
     products: [

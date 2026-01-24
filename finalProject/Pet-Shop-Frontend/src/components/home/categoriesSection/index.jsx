@@ -3,9 +3,8 @@ import styles from "./styles.module.css"
 import { useDispatch,useSelector } from "react-redux";
 import { useEffect } from "react";
 import { categoriesGet } from "../../../redux/slices/categoriesSlice";
-import { API_URL } from "../../../api/api";
 import CardsGrid from "../../ui/cardsGrid";
-import CategoryCard from "../../ui/categoriesCard";
+import CategoryCard from "../../categoryCard";
 
 export default function CategoriesSection(){
 const dispatch = useDispatch()

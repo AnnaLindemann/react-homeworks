@@ -54,7 +54,8 @@ const isMobile = useMediaQuery(theme.breakpoints.down("md"))
       </Box>
      <Box sx={{display:"flex",alignItems:"center"}}>
   <IconButton component={Link} to="/cart" aria-label="Go to cart" sx={{width:48,height:48}}>
-    <Badge badgeContent={totalQty} invisible={totalQty<1} overlap="circular" sx={{"& .MuiBadge-badge":{minWidth:20,height:20,borderRadius:999,fontSize:12,fontWeight:700,lineHeight:1,bgcolor:"primary.main",color:"common.white",border:"2px solid",borderColor:"common.white",top:6,right:6,pointerEvents:"none"}}}>
+    <Badge badgeContent={totalQty} invisible={totalQty<1} overlap="circular" anchorOrigin={{vertical:"top",horizontal:"right"}} sx={{"& .MuiBadge-badge":{minWidth:20,height:20,borderRadius:999,fontSize:12,fontWeight:700,lineHeight:1,bgcolor:"primary.main",color:"common.white",border:"2px solid",borderColor:"common.white",transform:"translate(-80%)",pointerEvents:"none"}}}>
+
       <Box component="img" src={bagCart} alt="Cart" sx={{width:38,height:38}}/>
     </Badge>
   </IconButton>

@@ -12,6 +12,19 @@ export const selectCartList = (state) => {
   return ids.map((id) => itemsById[id])
 }
 
+export const selectTotalPrice = (state) => {
+ const {ids, itemsById} = state.cart;
+ 
+ return ids.reduce((sum,id) => {
+  const item = itemsById[id];
+  if(!item) return sum;
+
+  const unitPrice = 
+  item.discont_price !== null && Number(item.discont_price) > 0 ? Number(item.discont_price) : Number(item.price)
+  return sum + unitPrice * item.qty
+ },0)
+}
+
 const cartSlice = createSlice({
   name: "cart",
   initialState:{

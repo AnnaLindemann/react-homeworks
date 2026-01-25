@@ -12,3 +12,14 @@ export async function postSale(data){
    throw error 
 }
 }
+
+
+export async function postOrder(data){
+
+  try{
+  const response = await api.post("/order/send",data)
+      return response.data  
+} catch(error){
+   throw error 
+}
+}

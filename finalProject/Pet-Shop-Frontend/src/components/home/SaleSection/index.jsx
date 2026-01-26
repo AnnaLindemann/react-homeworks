@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { productsGet } from "../../../redux/slices/productsSlice";
 import CardsGrid from "../../ui/cardsGrid";
 import ProductCard from "../../productCard";
@@ -18,9 +18,18 @@ export default function SaleSection() {
     if (status === "idle") dispatch(productsGet());
   }, [status, dispatch]);
 
-  const fourItems = items
-    .filter((item) => item.discont_price !== null && item.discont_price < item.price)
-    .slice(0, 4);
+  
+     const fourItems = useMemo(() => {
+      if(!Array.isArray(items) || items.length === 0) return [];
+    
+      const copy = items.slice();
+      for(let i = copy.length-1; i > 0; i--){
+        const j = Math.floor(Math.random() * (i+1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];  
+      }
+        return copy.slice(0,4);
+    
+     },[items])
 
   let content = null;
 

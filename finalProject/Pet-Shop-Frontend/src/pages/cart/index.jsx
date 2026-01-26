@@ -97,14 +97,16 @@ export default function Cart() {
           </Link>
         </div>
       ) : (
-        <div>
+        <div className={styles.layout}>
+  <div className={styles.itemsCol}>
           <CartItems
             items={cartList}
             onIncrease={handleInc}
             onDecrease={handleDec}
             onRemove={handleRemove}
           />
-
+  </div>
+  <div className={styles.formCol}>
           <CartForm
             onSubmit={handleOrderSubmit}
             totalQty={totalQty}
@@ -112,7 +114,7 @@ export default function Cart() {
             status={requestStatus}
             errorMessage={errorMessage}
           />
-
+</div>
           <CartDialog open={isSuccessOpen} onClose={handleSuccessClose} />
         </div>
       )}

@@ -48,7 +48,7 @@ export default function CartForm({
       <Box
         component="form"
         onSubmit={handleSubmit(submit)}
-        sx={{ display: "flex", flexDirection: "column", gap: { xs: 1.75, md: 2.25 } }}
+        sx={{ display: "flex", flexDirection: "column", gap: { xs: 0.5, md: 0.8 } }}
       >
         <TextField
           placeholder="Name"

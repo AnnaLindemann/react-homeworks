@@ -1,9 +1,10 @@
-// src/theme.js
 import { createTheme } from "@mui/material/styles";
 
 export const theme = createTheme({
   typography: {
     fontFamily: "Montserrat, sans-serif",
+
+  
     h2: {
       fontWeight: 800,
       fontSize: "2rem",
@@ -12,6 +13,8 @@ export const theme = createTheme({
         fontSize: "2.5rem",
       },
     },
+
+  
     h3: {
       fontWeight: 900,
       fontSize: "2.75rem",
@@ -20,11 +23,14 @@ export const theme = createTheme({
         fontSize: "3.25rem",
       },
     },
+
+
     h4: {
       fontWeight: 500,
       fontSize: "1.25rem",
       lineHeight: 1.2,
     },
+
     subtitle2: {
       fontWeight: 400,
       fontSize: "0.875rem",
@@ -38,12 +44,12 @@ export const theme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#0D50FF",
+      main: "rgba(18, 80, 243, 1)",
       contrastText: "#FFFFFF",
     },
     background: {
       default: "#FFFFFF",
-      paper: "#F3F4F6",
+      paper: "#F3F4F6", 
     },
     text: {
       primary: "#111111",
@@ -68,6 +74,7 @@ export const theme = createTheme({
         },
       },
     },
+
 
     MuiTextField: {
       defaultProps: {

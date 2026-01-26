@@ -30,14 +30,15 @@ const isMobile = useMediaQuery(theme.breakpoints.down("md"))
 
   return(
     <AppBar position="static" elevation={0} sx={{bgcolor: "white", color:"black", }}>
-     <Toolbar sx={{px: {xs: 2, md: 5}, display: "flex", alignItems: "center", gap: 2}}>
+     <Toolbar sx={{px: {xs: 2, md: 5}, display: "flex", alignItems: "center", gap: 2, position: "relative"}}>
      <Box sx={{display: "flex", alignItems: "center", gap:1}}>
       {isMobile && (
         <IconButton aria-label="Open menu" onClick={openDrawer} sx={{border: "1px solid", borderColor: "divider", borderRadius: 2}}>
           <MenuIcon/>
           </IconButton>
       )}
-      <IconButton component={Link} to="/" aria-label="Go to home" sx={{width: 70, height:70, bgcolor: "primary.main", "&:hover": {bgcolor:"primary.main"}, m: 2}}>
+      <IconButton component={Link} to="/" aria-label="Go to home" sx={{width: 50, height:50, bgcolor: "primary.main", "&:hover": {bgcolor:"primary.main"},position: { xs: "absolute", md: "static" },
+      left: { xs: "50%", md: "auto" }, transform: { xs: "translateX(-40%)", md: "none" }, m: { xs: 0, md: 2 },}}>
       <Box component="img" src={Logo} alt="Pet Shop Logo" sx={{width: 34, height: 34}}/>
         
         </IconButton>

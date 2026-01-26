@@ -43,9 +43,7 @@ const fieldSx = {
               <TextField placeholder="Phone number" fullWidth {...register("phone", { required: "Phone is required", pattern: { value: /^\+?[0-9()\-\s]{7,20}$/, message: "Phone can contain digits, +, spaces, dashes and parentheses" }, validate: (v) => v.replace(/\D/g, "").length >= 8 || "Phone number is too short" })} error={Boolean(errors.phone)} helperText={errors.phone?.message || " "} sx={fieldSx} />
               <TextField placeholder="Email" fullWidth {...register("email", { required: "Email is required", pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: "Please enter a valid email" } })} error={Boolean(errors.email)} helperText={errors.email?.message || " "} sx={fieldSx} />
 
-              <Button type="submit" fullWidth disabled={isLoading} sx={{ width: "100%", py: { xs: "0.9rem", md: "1rem" }, backgroundColor: "#fff", color: "#111", borderRadius: "10px", boxShadow: "0 8px 20px rgba(0,0,0,0.18)", "&:hover": { backgroundColor: "#0f0f0f", color: "#fff" }, "&.Mui-disabled": { backgroundColor: "rgba(255,255,255,0.75)", color: "rgba(0,0,0,0.55)" } }}>{isLoading ? "Sending..." : "Get a discount"}</Button>
-
-              {isSuccess && <Typography sx={{ textAlign: "center", color: "#0D50FF", fontWeight: 600, mt: "0.25rem" }}>Request Submitted</Typography>}
+              <Button type="submit" fullWidth disabled={isLoading || isSuccess} sx={{ width: "100%", py: { xs: "0.9rem", md: "1rem" }, backgroundColor: "#fff", color: "#111", borderRadius: "10px", boxShadow: "0 8px 20px rgba(0,0,0,0.18)", "&:hover": { backgroundColor: "#0f0f0f", color: "#fff" }, "&.Mui-disabled": { backgroundColor: "#fff", color: "#0D50FF" } }}>{isSuccess ? "Request Submitted" : isLoading ? "Sending..." : "Get a discount"}</Button>
               {isError && <Alert severity="error" sx={{ mt: "0.25rem" }}>Something went wrong, try again</Alert>}
             </Box>
           </Grid>

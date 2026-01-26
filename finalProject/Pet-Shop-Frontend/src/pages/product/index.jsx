@@ -112,12 +112,15 @@ export default function Product() {
   };
 
   const price = Number(product?.price);
-  const discountPrice = Number(product?.discont_price);
-  const hasDiscount =
-    Number.isFinite(price) &&
-    Number.isFinite(discountPrice) &&
-    discountPrice !== null &&
-    discountPrice < price;
+const discountPrice =
+  product?.discont_price === null ? null : Number(product?.discont_price);
+
+const hasDiscount =
+  Number.isFinite(price) &&
+  discountPrice !== null &&
+  Number.isFinite(discountPrice) &&
+  discountPrice > 0 &&
+  discountPrice < price;
 
   const percent = hasDiscount && product ? getDiscountPercent(product) : null;
 

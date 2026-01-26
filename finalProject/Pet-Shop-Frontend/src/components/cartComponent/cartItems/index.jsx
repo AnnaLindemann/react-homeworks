@@ -4,6 +4,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { API_URL } from "../../../api/api";
+import { Link } from "react-router-dom";
 
 export default function CartItems({ items, onIncrease, onDecrease, onRemove }) {
   return (
@@ -11,13 +12,18 @@ export default function CartItems({ items, onIncrease, onDecrease, onRemove }) {
       {items.map((item) => {
         const discount = Number(item.discont_price);
         const hasDiscount = Number.isFinite(discount) && discount > 0;
-
+        const to = `/products/${item.id}`;
         return (
           <Box key={item.id} className={styles.card}>
-            <img className={styles.image} src={`${API_URL}${item.image}`} alt={item.title} />
+            <Link to={to} className={styles.imageLink} aria-label={`Open ${item.title}`}>
+              <img className={styles.image} src={`${API_URL}${item.image}`} alt={item.title} />
+            </Link>
 
             <Box className={styles.body}>
-              <Typography className={styles.title}>{item.title}</Typography>
+              <Link to={to} className={styles.titleLink}>
+                <Typography className={styles.title}>{item.title}</Typography>
+              </Link>
+
 
               <Box className={styles.bottomRow}>
                 <Box className={styles.qty}>

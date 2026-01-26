@@ -25,6 +25,19 @@ export const selectTotalPrice = (state) => {
  },0)
 }
 
+export const selectCartItemById = (state, id) => {
+  return state.cart.itemsById[id];
+};
+
+export const selectCartQtyById = (state, id) => {
+  const item = state.cart.itemsById[id];
+  return item ? item.qty : 0;
+};
+
+export const selectIsInCartById = (state, id) => {
+  return Boolean(state.cart.itemsById[id]);
+};
+
 const cartSlice = createSlice({
   name: "cart",
   initialState:{

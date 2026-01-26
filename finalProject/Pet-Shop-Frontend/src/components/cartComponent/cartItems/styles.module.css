@@ -106,6 +106,24 @@
   right: 0.75rem;
 }
 
+.imageLink {
+  display: block;
+  flex: 0 0 auto;
+  text-decoration: none;
+  border-radius: inherit;
+}
+
+.titleLink {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.titleLink:hover .title {
+  text-decoration: underline;
+}
+
+
 @media (max-width: 56.25rem) {
   .card {
     grid-template-columns: 7.5rem 1fr;

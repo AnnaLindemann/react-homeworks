@@ -103,14 +103,28 @@ export default function Footer() {
           </Box>
 
           <Box
-            sx={{
-              mt: "2rem",
-              height: { xs: "15rem", md: "20rem" },
-              borderRadius: "0.75rem",
-              backgroundColor: "grey.100",
-              width: "100%",
-            }}
-          />
+  sx={{
+    mt: "2rem",
+    height: { xs: "15rem", md: "20rem" },
+    borderRadius: "0.75rem",
+    backgroundColor: "grey.100",
+    width: "100%",
+    overflow: "hidden",
+  }}
+>
+  <Box
+    component="iframe"
+    title="Map: Wallstraße 9–13, Berlin"
+    src="https://www.openstreetmap.org/export/embed.html?bbox=13.40497523546219%2C52.51078522551768%2C13.408515751361847%2C52.51223805957966&layer=mapnik"
+    loading="lazy"
+    sx={{
+      width: "100%",
+      height: "100%",
+      border: 0,
+      display: "block",
+    }}
+  />
+</Box>
         </Box>
       </Container>
     </Box>

@@ -5,7 +5,7 @@ import { useSelector,useDispatch } from "react-redux";
 import { addToCart } from "../../redux/slices/cartSlice";
 
 
-export function getDiscountPercent(item) {
+function getDiscountPercent(item) {
   if (item?.discont_price === null) return null;
 
   const price = Number(item?.price);

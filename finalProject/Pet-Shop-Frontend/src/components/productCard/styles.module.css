@@ -105,13 +105,20 @@
 }
 
 .btnAdd:hover {
-  filter: brightness(0.95);
+  background: #0f0f0f;
+  color: #fff;
+  filter: none;
 }
 
 .btnAdded {
-  background: #0f0f0f;
-  color: #fff;
+  background: #fff;
+  color: #111;
+  border: 1px solid #e6e6e6;
   cursor: default;
+}
+.btnAdded:hover {
+  background: #fff;
+  color: #111;
 }
 
 @media (hover: hover) and (pointer: fine) {

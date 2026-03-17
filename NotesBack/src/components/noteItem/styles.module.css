@@ -1,0 +1,26 @@
+.noteLi{
+background-color: rgb(228, 230, 233);
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+
+border-radius: 0.5rem;
+padding: 0.5rem;
+}
+.itemContent{
+  padding: 0.5rem;
+  flex: 2;
+  word-break: break-word; 
+}
+.itemActions{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+.itemButton{
+  min-width: 3rem;
+  padding: 0.2rem;
+}

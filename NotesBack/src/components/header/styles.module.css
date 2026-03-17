@@ -1,0 +1,11 @@
+.headerCont{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(27, 23, 23);
+  padding: 0.5rem;
+  width: 100%;
+}
+.headerH{
+  color: aliceblue;
+}

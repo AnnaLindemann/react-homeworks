@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./styles.module.css"
 
 
-function NoteForm() {
+function NoteForm({onNoteCreated}) {
   const [noteData, setNoteData] = useState({
     title: "",
     text: "",
@@ -36,6 +36,8 @@ console.log("Server responce",data)
       title: "",
       text: "",
     })
+
+    onNoteCreated()
 }catch(error){
   console.error("Create note error:", error)
 }

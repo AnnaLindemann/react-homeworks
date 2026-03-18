@@ -15,7 +15,7 @@ function NoteItem({ note, onDelete, onEdit }) {
 
   const handleSave = (data) => {
     
-    onEdit(note.id, data); 
+    onEdit(note._id, data); 
     setIsOpen(false);
   };
 
@@ -30,7 +30,7 @@ function NoteItem({ note, onDelete, onEdit }) {
         <button
           type="button"
           className={styles.itemButton}
-          onClick={() => onDelete(note.id)}
+          onClick={() => onDelete(note._id)}
         >
           Delete
         </button>
